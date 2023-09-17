@@ -19,11 +19,11 @@ $middleware = [
 Route::group(['middleware' => $middleware], function (){
 
     Route::get('/', function () {
-        return view('welcome');
+        return view('home.index');
     });
 
     Route::get('/home', function () {
-        return view('welcome');
+        return view('home.index');
     });
 
 });
