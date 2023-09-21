@@ -20,10 +20,11 @@ Route::group(['middleware' => $middleware], function (){
 
     Route::get('/', function () {
         return view('home.index');
-    });
-
+    })->name('home.index');
     Route::get('/home', function () {
         return view('home.index');
     });
 
+    // User
+    Route::get('/user', [\App\Http\Controllers\UserController::class, 'index'])->name('user.index');
 });

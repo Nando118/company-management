@@ -304,13 +304,13 @@ return [
         // Sidebar items:
         [
             'text'        => 'Home',
-            'url'         => '#',
+            'url'         => '/',
             'icon'        => 'fas fa-home',
         ],
-        ['header' => 'COMPANY SETTINGS'],
+        ['header' => 'User Setting'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Users',
+            'url'  => '/user',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
