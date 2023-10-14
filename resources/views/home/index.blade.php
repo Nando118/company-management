@@ -21,13 +21,9 @@
                             </div>
                             <div class="card-body text-center">
                                 <p class="card-text h2">{{ $users }} Users</p>
-                                <div class="row mt-4">
-                                    <div class="col">
-                                        <a href="{{ route('user.index') }}" class="btn btn-info"><i class="fas fa-eye"></i> View Users</a>
-                                    </div>
-                                    <div class="col">
-                                        <a href="{{ route('user.add') }}" class="btn btn-success"><i class="fas fa-plus"></i> Add User</a>
-                                    </div>
+                                <div class="btn-group mr-1">
+                                    <a href="{{ route('user.index') }}" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                                    <a href="{{ route('user.create') }}" class="btn btn-success"><i class="fas fa-plus"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -35,11 +31,14 @@
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-footer">
-                                <div class="card-title font-weight-bold"><i class="fas fa-building"></i> Total Companies</div>
+                                <div class="card-title font-weight-bold"><i class="fas fa-user"></i> Total Companies</div>
                             </div>
-                            <div class="card-body">
-                                <p class="card-text h4">9999</p>
-                                <a href="#" class="btn btn-success">Add Company</a>
+                            <div class="card-body text-center">
+                                <p class="card-text h2">{{ $companies }} Companies</p>
+                                <div class="btn-group mr-1">
+                                    <a href="{{ route('company.index') }}" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                                    <a href="{{ route('company.create') }}" class="btn btn-success"><i class="fas fa-plus"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>

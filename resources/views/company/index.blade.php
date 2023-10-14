@@ -4,7 +4,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('home.index') }}">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Users</li>
+            <li class="breadcrumb-item active" aria-current="page">Companies</li>
         </ol>
     </nav>
 @endsection
@@ -16,7 +16,7 @@
                 <div class="table-responsive px-1">
                     <div class="row mb-3">
                         <div class="col d-flex justify-content-end">
-                            <a class="btn btn-success" href="{{ route('user.create') }}" role="button"><i class="fas fa-plus"></i> Add User</a>
+                            <a class="btn btn-success" href="{{ route('company.create') }}" role="button"><i class="fas fa-plus"></i> Add Company</a>
                         </div>
                     </div>
                     <table id="tbl_list" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -25,6 +25,8 @@
                                 <th>No</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Logo</th>
+                                <th>Website</th>
                                 <th>Created At</th>
                                 <th style="width: 12%">Action</th>
                             </tr>
@@ -45,7 +47,7 @@
             $('#tbl_list').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: '{{ route('user.index') }}',
+                ajax: '{{ route('company.index') }}',
                 columns: [
                     {
                         data: null,
@@ -59,16 +61,27 @@
                     },
                     { data: 'name', name: 'name' },
                     { data: 'email', name: 'email' },
+                    {
+                        data: 'logo',
+                        name: 'logo',
+                        render: function (data, type, row) {
+                            if (type === 'display' && data) {
+                                return '<img src="{{ asset('storage/') }}/' + data + '" width="100" height="100">';
+                            }
+                            return data;
+                        }
+                    },
+                    { data: 'website', name: 'website' },
                     { data: 'created_at', name: 'created_at' },
                     { data: 'action', name: 'action', orderable: false, searchable: false },
                 ],
                 columnDefs: [
                     {
-                        target: 3,
+                        target: 5,
                         render: DataTable.render.date()
-                    }
+                    },
                 ],
-                order: [3, 'desc']
+                order: [5, 'desc'],
             });
         });
 

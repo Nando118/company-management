@@ -4,8 +4,12 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('home.index') }}">Home</a></li>
-            <li class="breadcrumb-item"><a href="{{ route('user.index') }}">Users</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Add Users</li>
+            <li class="breadcrumb-item"><a href="{{ route('user.index') }}">User</a></li>
+            @if(isset($userData))
+                <li class="breadcrumb-item active" aria-current="page">Edit Users</li>
+            @else
+                <li class="breadcrumb-item active" aria-current="page">Add Users</li>
+            @endif
         </ol>
     </nav>
 @endsection
@@ -31,7 +35,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="email">Email address<span style="color: red;">*</span></label>
+                        <label for="email">Email Address<span style="color: red;">*</span></label>
                         <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" aria-describedby="emailHelp" name="email" value="{{ old('email') ?? (isset($userData) ? $userData->email : '') }}">
                         @if(isset($userData))
                             <small id="emailHelp" class="form-text text-muted">Please enter a valid email if you want to change your email address.</small>

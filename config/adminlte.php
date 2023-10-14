@@ -307,54 +307,17 @@ return [
             'url'         => '/',
             'icon'        => 'fas fa-home',
         ],
-        ['header' => 'User Setting'],
+        ['header' => 'USER SETTINGS'],
         [
-            'text' => 'Users',
+            'text' => 'User Accounts',
             'url'  => '/user',
             'icon' => 'fas fa-fw fa-user',
         ],
+        ['header' => 'COMPANY SETTINGS'],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
+            'text' => 'Companies',
+            'url'  => '/company',
+            'icon' => 'fas fa-fw fa-building',
         ],
         ['header' => 'labels'],
         [

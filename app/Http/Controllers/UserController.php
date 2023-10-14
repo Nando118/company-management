@@ -29,8 +29,8 @@ class UserController extends Controller
         ]);
     }
 
-    public function add() {
-        $action = route("user.submit");
+    public function create() {
+        $action = route("user.store");
         $method = "post";
 
         return view("user.form.form", [
@@ -58,7 +58,7 @@ class UserController extends Controller
 
             if ($result) {
                 return redirect()->route('user.index')
-                    ->with('success', 'Successfully adding new users!');
+                    ->with('success', 'Successfully adding new user!');
             }
 
             return redirect()->back()
