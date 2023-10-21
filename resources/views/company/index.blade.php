@@ -89,8 +89,8 @@
             const el = $(this);
             Swal.fire({
                 icon: 'warning',
-                title: 'Delete User Data',
-                text: "Are you sure you want to delete this user's data?",
+                title: 'Delete Company Data',
+                text: "Are you sure you want to delete this company data?",
                 showCancelButton: true,
                 confirmButtonText: 'Yes',
                 cancelButtonText: 'Cancel',
@@ -112,14 +112,14 @@
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Success!',
-                                text: 'User data has been successfully deleted!',
+                                text: 'Company data has been successfully deleted!',
                             });
                         }
                         else {
                             Swal.fire({
                                 icon: 'error',
                                 title: 'ERROR',
-                                text: 'User data failed to delete!',
+                                text: 'Company data failed to delete!',
                             });
                         }
                     });

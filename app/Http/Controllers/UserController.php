@@ -17,7 +17,7 @@ class UserController extends Controller
                 ->addColumn('action', function ($row) {
                     $btn = '<div class="btn-group mr-1">';
                     $btn .= '<a href="'. route('user.edit', $row->id) .'" class="btn btn-warning btn-sm" title="Edit"><i class="fas fa-fw fa-edit"></i></a> ';
-                    $btn .= '<button type="button" class="delete btn btn-danger btn-sm" title="Delete" data-url="' . route('user.delete', [$row->id]) . '"><i class="fas fa-fw fa-trash"></i></button> ';
+                    $btn .= '<button type="button" class="delete btn btn-danger btn-sm" title="Delete" data-url="' . route('user.delete', $row->id) . '"><i class="fas fa-fw fa-trash"></i></button> ';
                     $btn .= '</div>';
                     return $btn;
                 })

@@ -33,4 +33,7 @@ Route::group(['middleware' => $middleware], function (){
     Route::get('/company', [\App\Http\Controllers\CompanyController::class, 'index'])->name('company.index');
     Route::get('/company/add', [\App\Http\Controllers\CompanyController::class, 'create'])->name('company.create');
     Route::post('/company/add/submit', [\App\Http\Controllers\CompanyController::class, 'store'])->name('company.store');
+    Route::get('/company/{id}/edit', [\App\Http\Controllers\CompanyController::class, 'edit'])->name('company.edit');
+    Route::post('/company/edit/{id}/update', [\App\Http\Controllers\CompanyController::class, 'update'])->name('company.update');
+    Route::delete('/company/{id}/delete', [\App\Http\Controllers\CompanyController::class, 'delete'])->name('company.delete');
 });
