@@ -319,6 +319,12 @@ return [
             'url'  => '/company',
             'icon' => 'fas fa-fw fa-building',
         ],
+        ['header' => 'EMPLOYEE SETTINGS'],
+        [
+            'text' => 'Employees',
+            'url'  => '/employee',
+            'icon' => 'fas fa-fw fa-users',
+        ],
         ['header' => 'labels'],
         [
             'text'       => 'important',

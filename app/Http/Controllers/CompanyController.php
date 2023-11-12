@@ -28,7 +28,7 @@ class CompanyController extends Controller
         }
 
         return view("company.index", [
-            "title" => "Company Management | Company List"
+            "title" => "Company Management | Companies List"
         ]);
     }
 

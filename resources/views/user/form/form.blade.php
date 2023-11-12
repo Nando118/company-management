@@ -4,11 +4,11 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('home.index') }}">Home</a></li>
-            <li class="breadcrumb-item"><a href="{{ route('user.index') }}">User</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('user.index') }}">Users</a></li>
             @if(isset($userData))
-                <li class="breadcrumb-item active" aria-current="page">Edit Users</li>
+                <li class="breadcrumb-item active" aria-current="page">Edit User</li>
             @else
-                <li class="breadcrumb-item active" aria-current="page">Add Users</li>
+                <li class="breadcrumb-item active" aria-current="page">Add User</li>
             @endif
         </ol>
     </nav>

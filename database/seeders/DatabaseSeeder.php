@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Employee;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,5 +21,13 @@ class DatabaseSeeder extends Seeder
              'email' => 'admin@admin.com',
              'password' => 'password',
          ]);
+
+         $employee = new Employee();
+         $employee->first_name = "Fernando";
+         $employee->last_name = "Verdy";
+         $employee->company_id = 1;
+         $employee->email = "fernando.verdy@gmail.com";
+         $employee->phone = "089111888222";
+         $employee->save();
     }
 }

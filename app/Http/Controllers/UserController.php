@@ -25,7 +25,7 @@ class UserController extends Controller
         }
 
         return view("user.index", [
-            "title" => "Company Management | User List"
+            "title" => "Company Management | Users List"
         ]);
     }
 

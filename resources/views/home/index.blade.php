@@ -31,7 +31,7 @@
                     <div class="col-md-4">
                         <div class="card">
                             <div class="card-footer">
-                                <div class="card-title font-weight-bold"><i class="fas fa-user"></i> Total Companies</div>
+                                <div class="card-title font-weight-bold"><i class="fas fa-building"></i> Total Companies</div>
                             </div>
                             <div class="card-body text-center">
                                 <p class="card-text h2">{{ $companies }} Companies</p>
@@ -47,9 +47,12 @@
                             <div class="card-footer">
                                 <div class="card-title font-weight-bold"><i class="fas fa-users"></i> Total Employees</div>
                             </div>
-                            <div class="card-body">
-                                <p class="card-text h4">9999</p>
-                                <a href="#" class="btn btn-success">Add Employee</a>
+                            <div class="card-body text-center">
+                                <p class="card-text h2">{{ $employees }} Employees</p>
+                                <div class="btn-group mr-1">
+                                    <a href="{{ route('employee.index') }}" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                                    <a href="#" class="btn btn-success"><i class="fas fa-plus"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
