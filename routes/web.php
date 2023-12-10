@@ -42,4 +42,6 @@ Route::group(['middleware' => $middleware], function (){
     Route::get('/employee/add', [\App\Http\Controllers\EmployeeController::class, 'create'])->name('employee.create');
     Route::get('/employee/get-companies', [\App\Http\Controllers\EmployeeController::class, 'getCompanies'])->name('employee.getCompanies');
     Route::post('/employee/add/submit', [\App\Http\Controllers\EmployeeController::class, 'store'])->name('employee.store');
+    Route::get('/employee/{id}/edit', [\App\Http\Controllers\EmployeeController::class, 'edit'])->name('employee.edit');
+    Route::post('/employee/edit/{id}/update', [\App\Http\Controllers\EmployeeController::class, 'update'])->name('employee.update');
 });

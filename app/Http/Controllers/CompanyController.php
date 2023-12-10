@@ -91,7 +91,7 @@ class CompanyController extends Controller
 
         } else {
             return redirect()->back()
-                ->with('error', 'An error occurred while adding a new user!');
+                ->with('error', 'An error occurred while adding a new company!');
         }
     }
 

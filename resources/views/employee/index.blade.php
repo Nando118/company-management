@@ -74,7 +74,7 @@
                         render: DataTable.render.date()
                     },
                 ],
-                order: [5, 'desc'],
+                order: [6, 'desc'],
             });
         });
 
