@@ -19,7 +19,7 @@ class EmployeeController extends Controller
                 ->addColumn('action', function ($row) {
                     $btn = '<div class="btn-group mr-1">';
                     $btn .= '<a href="' . route("employee.edit", $row->id) .  '" class="btn btn-warning btn-sm" title="Edit"><i class="fas fa-fw fa-edit"></i></a> ';
-                    $btn .= '<button type="button" class="delete btn btn-danger btn-sm" title="Delete" data-url="#"><i class="fas fa-fw fa-trash"></i></button> ';
+                    $btn .= '<button type="button" class="delete btn btn-danger btn-sm" title="Delete" data-url="' . route('employee.delete', $row->id) . '"><i class="fas fa-fw fa-trash"></i></button> ';
                     $btn .= '</div>';
                     return $btn;
                 })
@@ -146,5 +146,21 @@ class EmployeeController extends Controller
             return redirect()->route('employee.index')
                 ->with('error', 'Failed to update employee data!');
         }
+    }
+
+    public function delete(string $id) {
+        $employee = Employee::findOrFail($id);
+
+        if ($employee) {
+            $employee->delete();
+        } else {
+            return response([
+                'success' => false,
+                'error' => 'Employee data not found!'
+            ]);
+        }
+        return response([
+            'success' => true
+        ]);
     }
 }
